@@ -10,7 +10,12 @@ let isLoyal: boolean;
 
 let isOpen : boolean;
 
-const reviews = [
+const reviews : {
+    name: string;
+    stars: number;
+    loyaltyUser: boolean;
+    date: string;
+}[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -52,8 +57,8 @@ const you: {
    age: 35
 }
 
-console.log(you.userName)
-console.log(you.userName)
+
+
 
 function populateUser(isReturning: boolean, userName:string ) {
     if (isReturning){
