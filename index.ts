@@ -38,7 +38,7 @@ showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 
 //fix code below
 const you = {
-    userName: {firstName: 'Bobby', lastName: 'Brown'},
+    userName: 'Bobby Brown',
     isReturning: true,
 }
 
