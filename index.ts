@@ -5,6 +5,9 @@
 import { showReviewTotal, populateUser } from './utils'
 let isOpen : boolean;
 
+const propertyContainer = document.querySelector('.properties')  //get div element
+ 
+//array with user review info
 const reviews : {
     name: string;
     stars: number;
@@ -33,7 +36,7 @@ const reviews : {
 
 
 
-//fix code below
+//object with user info
 const you: {
     firstName: string;
     lastName: string;
@@ -48,7 +51,7 @@ const you: {
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 
-//Properties
+//Properties object array
 const properties : {
     image: string;
     title: string;
@@ -106,6 +109,6 @@ const properties : {
 
 
 
-
+// call the function
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 populateUser(you.isReturning, you.firstName)
