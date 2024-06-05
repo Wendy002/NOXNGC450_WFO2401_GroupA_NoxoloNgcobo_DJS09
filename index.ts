@@ -2,7 +2,7 @@
 // Write a function that will only accept numbers and attend to 
 // all TypeScript weakness flags.
 // : number
-const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
+export const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
 
 const reviews = [
     {
