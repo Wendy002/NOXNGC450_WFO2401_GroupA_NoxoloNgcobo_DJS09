@@ -29,3 +29,4 @@ const reviews = [
 function showReviewTotal(value: number){
     reviewTotalDisplay.innerHTML = value.toString();
 }
+showReviewTotal(reviews.length);
