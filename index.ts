@@ -37,10 +37,10 @@ function showReviewTotal(value: number, reviewer: string, rating: boolean){
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 
 //fix code below
-// const you = {
-//     userName: {firstName: 'Bobby', lastName: 'Brown'},
-//     isReturning: 'yes',
-// }
+const you = {
+    userName: {firstName: 'Bobby', lastName: 'Brown'},
+    isReturning: true,
+}
 
 
 function populateUser(isReturning: boolean, userName:string ) {
