@@ -7,6 +7,8 @@ let isLoyal = false;
 const userNameDisplay = document.querySelector('#user') as HTMLElement
 const returningUserDisplay = document.querySelector('#returning-user') as HTMLElement
 
+const age = 23;
+
 const reviews = [
     {
         name: 'Sheia',
