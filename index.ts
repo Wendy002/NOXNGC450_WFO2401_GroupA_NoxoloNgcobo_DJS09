@@ -6,9 +6,9 @@ export const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElem
 
 const userNameDisplay = document.querySelector('#user') as HTMLElement;
 const returningUserDisplay = document.querySelector('#returning-user') as HTMLElement;
-
 let isLoyal: boolean;
-const age = 23;
+
+let isOpen : boolean;
 
 const reviews = [
     {
