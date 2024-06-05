@@ -27,5 +27,5 @@ const reviews = [
 
 // functon that that show review tota;
 function showReviewTotal(value: number){
-    reviewTotalDisplay.innerHTML = value;
+    reviewTotalDisplay.innerHTML = value.toString();
 }
