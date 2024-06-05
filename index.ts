@@ -41,13 +41,18 @@ showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 
 //fix code below
 const you: {
-    userName : string;
+    firstName : string;
+    lastName: string;
     isReturning: boolean;
+    age: number;
 } = {
-   userName: 'Bobby',
+   firstName: 'Bobby',
+   lastName: 'Brown',
    isReturning: true,
+   age: 35
 }
 
+console.log(you.userName)
 console.log(you.userName)
 
 function populateUser(isReturning: boolean, userName:string ) {
