@@ -4,6 +4,9 @@
 // : number
 export const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
 let isLoyal = false;
+const userNameDisplay = document.querySelector('#user') as HTMLElement
+const returningUserDisplay = document.querySelector('#returning-user') as HTMLElement
+
 const reviews = [
     {
         name: 'Sheia',
@@ -32,3 +35,19 @@ function showReviewTotal(value: number, reviewer: string, rating: boolean){
     reviewTotalDisplay.innerHTML ='review total ' + value.toString() + '| last reviewed by ' + reviewer + starRating;
 }
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
+
+//fix code below
+// const you = {
+//     userName: {firstName: 'Bobby', lastName: 'Brown'},
+//     isReturning: 'yes',
+// }
+
+
+function populateUser(isReturning: boolean, userName:string ) {
+    if (isReturning){
+        returningUserDisplay.innerHTML = 'back'
+    }
+    userNameDisplay.innerHTML = userName
+}
+
+populateUser(you.isReturning, you.userName)
