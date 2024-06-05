@@ -3,7 +3,7 @@
 // all TypeScript weakness flags.
 // : number
 export const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
-let hasStar = false;
+let isLoyal = false;
 const reviews = [
     {
         name: 'Sheia',
@@ -27,7 +27,8 @@ const reviews = [
 
 // functon that that show review tota;
 function showReviewTotal(value: number, reviewer: string, rating: boolean){
-
-    reviewTotalDisplay.innerHTML ='review total ' + value.toString() + '| last reviewed by ' + reviewer;
+    isLoyal = rating;
+    const starRating = isLoyal? '⭐': ''
+    reviewTotalDisplay.innerHTML ='review total ' + value.toString() + '| last reviewed by ' + reviewer + starRating;
 }
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
