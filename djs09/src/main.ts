@@ -10,12 +10,22 @@ const footer = document.querySelector('.footer')  as HTMLElement
 
 let isOpen: boolean
 // Reviews
-const reviews : { 
-    name: string; 
-    stars: number; 
-    loyaltyUser: LoyaltyUser; //use type loyalty user
-    date: string
-    }[] = [
+const reviews :
+  (
+    {
+    name: string;
+    stars: number;
+    loyaltyUser: LoyaltyUser;
+    date: string;                                   //used union to description instead of using any
+} |
+{
+    name: string;
+    stars: number;
+    loyaltyUser: LoyaltyUser;
+    date: string;
+    description: string;
+}
+)[]= [
     {
         name: 'Sheia',
         stars: 5,
@@ -32,7 +42,9 @@ const reviews : {
         name: 'Omar',
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
-        date: '27-03-2021'
+        date: '27-03-2021',
+        description:'Great house but could be better',
+
     },
 ]
 
