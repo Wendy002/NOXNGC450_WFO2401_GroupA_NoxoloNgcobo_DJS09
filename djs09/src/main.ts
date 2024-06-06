@@ -8,24 +8,10 @@ import { Permissions, LoyaltyUser } from './enum.ts'
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 const footer = document.querySelector('.footer')  as HTMLElement
 
-let isOpen: boolean
-// Reviews
-const reviews :
-  (
-    {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;                                   //used union to description instead of using any
-} |
-{
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-    description: string;
-}
-)[]= [
+let isLoggedIn: boolean // check if user is logged in
+
+// Reviews array
+const reviews: any[] = [             // use any to allow for flexibibility adding more properties
     {
         name: 'Sheia',
         stars: 5,
