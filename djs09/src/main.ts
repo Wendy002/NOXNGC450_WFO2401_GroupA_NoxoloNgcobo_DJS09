@@ -105,6 +105,9 @@ showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
 
+isLoggedIn = false //set it to true
+
+
 //show property details fuction
 function showDetails(authorityStatus: any, element : HTMLDivElement, price: number) {
   if (authorityStatus) {
