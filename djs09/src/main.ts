@@ -4,10 +4,10 @@
 // properties array
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
+const footer = document.querySelector('.footer')  as HTMLElement
 
-import { showReviewTotal, populateUser } from './utils'
-//let isOpen: boolean
-
+import { showReviewTotal, populateUser } from './utils.ts'
+let isOpen: boolean
 // Reviews
 const reviews : { 
     name: string; 
@@ -120,5 +120,11 @@ for (let i = 0; i < properties.length; i++) {
     card.appendChild(image)
     propertyContainer.appendChild(card)
 }
+
+// use your location, your current time, and the current temperature of your
+// location
+let currentLocation: [string, string, number] = ['London', '11:35', 17]
+footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + currentLocation[2] + '°'
+
 
 
