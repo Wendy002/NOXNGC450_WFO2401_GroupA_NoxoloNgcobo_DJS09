@@ -2,18 +2,18 @@
 
 
 //import helper functions
-import { showReviewTotal, populateUser } from './utils'
-let isOpen : boolean; 
+const propertyContainer = document.querySelector('.properties') as HTMLElement
 
-const propertyContainer = document.querySelector('.properties') as HTMLElement //get div element
- 
-//array with user review info
-const reviews : {
-    name: string;
-    stars: number;
-    loyaltyUser: boolean;
-    date: string;
-}[] = [
+import { showReviewTotal, populateUser } from './utils'
+let isOpen: boolean
+
+// Reviews
+const reviews : { 
+    name: string; 
+    stars: number; 
+    loyaltyUser: boolean; 
+    date: string
+    }[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -34,9 +34,7 @@ const reviews : {
     },
 ]
 
-
-
-//object with user info
+// User
 const you: {
     firstName: string;
     lastName: string;
@@ -106,13 +104,11 @@ const properties : {
     }
 ]
 
-
-
-// call the function
 // Functions
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
+
 //Add the properties
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div')
