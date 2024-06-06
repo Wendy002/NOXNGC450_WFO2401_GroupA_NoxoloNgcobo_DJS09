@@ -2,11 +2,12 @@
 // This is a continuation of the Challenge, in which you are asked to add
 // the 3 properties image and title to the dashboard based on the 
 // properties array
+import { showReviewTotal, populateUser } from './utils.ts'
+import { Permissions } from './enum.ts'
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 const footer = document.querySelector('.footer')  as HTMLElement
 
-import { showReviewTotal, populateUser } from './utils.ts'
 let isOpen: boolean
 // Reviews
 const reviews : { 
