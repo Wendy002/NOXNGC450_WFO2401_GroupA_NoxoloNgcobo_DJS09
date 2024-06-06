@@ -1,9 +1,9 @@
 // Number Types mini-challenge 10 10.2
-// Write a function that will only accept numbers and attend to 
-// all TypeScript weakness flags.
-// : number
+
+
+//import helper functions
 import { showReviewTotal, populateUser } from './utils'
-let isOpen : boolean;
+let isOpen : boolean; 
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement //get div element
  
@@ -109,5 +109,17 @@ const properties : {
 
 
 // call the function
-showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
+// Functions
+showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
+
 populateUser(you.isReturning, you.firstName)
+//Add the properties
+for (let i = 0; i < properties.length; i++) {
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = properties[i].title
+    const image = document.createElement('img')
+    image.setAttribute('src', properties[i].image)
+    card.appendChild(image)
+    propertyContainer.appendChild(card)
+}
