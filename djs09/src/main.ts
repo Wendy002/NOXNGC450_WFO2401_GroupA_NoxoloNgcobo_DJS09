@@ -37,15 +37,10 @@ const reviews : {
 ]
 
 // User
-const you: {
-    firstName: string;
-    lastName: string;
-    isReturning: boolean;
-    age: number;
-    stayedAt: string[]
-} = {
+const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
+    permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
