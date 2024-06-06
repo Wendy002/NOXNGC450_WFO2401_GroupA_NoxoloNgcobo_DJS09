@@ -13,7 +13,7 @@ let isOpen: boolean
 const reviews : { 
     name: string; 
     stars: number; 
-    loyaltyUser: boolean; 
+    loyaltyUser: LoyaltyUser; //use type loyalty user
     date: string
     }[] = [
     {
