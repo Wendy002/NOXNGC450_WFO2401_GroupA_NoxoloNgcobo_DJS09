@@ -6,7 +6,7 @@
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 
 import { showReviewTotal, populateUser } from './utils'
-let isOpen: boolean
+//let isOpen: boolean
 
 // Reviews
 const reviews : { 
