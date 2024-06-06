@@ -1,13 +1,11 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // Number Types mini-challenge 10 10.2
-// Write a function that will only accept numbers and attend to 
-// all TypeScript weakness flags.
-// : number
+Object.defineProperty(exports, "__esModule", { value: true });
+//import helper functions
+var propertyContainer = document.querySelector('.properties');
 var utils_1 = require("./utils");
 var isOpen;
-var propertyContainer = document.querySelector('.properties'); //get div element
-//array with user review info
+// Reviews
 var reviews = [
     {
         name: 'Sheia',
@@ -28,7 +26,7 @@ var reviews = [
         date: '27-03-2021'
     },
 ];
-//object with user info
+// User
 var you = {
     firstName: 'Bobby',
     lastName: 'Brown',
@@ -78,6 +76,16 @@ var properties = [
         isAvailable: true
     }
 ];
-// call the function
+// Functions
 (0, utils_1.showReviewTotal)(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 (0, utils_1.populateUser)(you.isReturning, you.firstName);
+//Add the properties
+for (var i = 0; i < properties.length; i++) {
+    var card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = properties[i].title;
+    var image = document.createElement('img');
+    image.setAttribute('src', properties[i].image);
+    card.appendChild(image);
+    propertyContainer.appendChild(card);
+}
