@@ -5,7 +5,7 @@
 import { showReviewTotal, populateUser } from './utils'
 let isOpen : boolean;
 
-const propertyContainer = document.querySelector('.properties')  //get div element
+const propertyContainer = document.querySelector('.properties') as HTMLElement //get div element
  
 //array with user review info
 const reviews : {
