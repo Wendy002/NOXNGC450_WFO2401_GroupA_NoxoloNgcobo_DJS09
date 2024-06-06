@@ -3,7 +3,7 @@
 // the 3 properties image and title to the dashboard based on the 
 // properties array
 import { showReviewTotal, populateUser } from './utils.ts'
-import { Permissions } from './enum.ts'
+import { Permissions, LoyaltyUser } from './enum.ts'
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 const footer = document.querySelector('.footer')  as HTMLElement
