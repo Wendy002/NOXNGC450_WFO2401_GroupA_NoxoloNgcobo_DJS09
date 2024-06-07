@@ -2,17 +2,17 @@
 // This is a continuation of the Challenge, in which you are asked to add
 // the 3 properties image and title to the dashboard based on the 
 // properties array
-import { showReviewTotal, populateUser } from './utils.ts'
-import { Permissions, LoyaltyUser } from './enum.ts'
+import { showReviewTotal, populateUser, showDetails } from './utils'
+import { Permissions , LoyaltyUser } from './enum.ts'
+import { Price, Country } from './types.ts'
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
-const footer = document.querySelector('.footer')  as HTMLElement
+const footer = document.querySelector('.footer') as HTMLElement
 
-let isLoggedIn: boolean // check if user is logged in
-let authorityStatus : any //check status
+let isLoggedIn: boolean
 
-// Reviews array
-const reviews: any[] = [             // use any to allow for flexibibility adding more properties
+// Reviews
+const reviews : any[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -30,12 +30,10 @@ const reviews: any[] = [             // use any to allow for flexibibility addin
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '27-03-2021',
-        description:'Great house but could be better',
-
+        description: 'Great hosts, location was a bit further than said.'
     },
 ]
 
-// User
 const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
@@ -54,9 +52,9 @@ const properties : {
         firstLine: string;
         city: string;
         code: number;
-        country: string;
+        country: Country;
     };
-    contact: [number, string];
+    contact: [ number, string ];
     isAvailable: boolean;
 }[] = [
     {
@@ -69,7 +67,7 @@ const properties : {
             code: 45632,
             country: 'Colombia'
         },
-        contact: [ +1123495082908, 'marywinkle@gmail.com'],
+        contact: [+112343823978921, 'marywinkle@gmail.com'],
         isAvailable: true  
     },
     {
@@ -82,7 +80,7 @@ const properties : {
             code: 343903,
             country: 'Poland'
         },
-        contact: [+1123495082908, 'garydavis@hotmail.com'],
+        contact: [+1298239028490830, 'garydavis@hotmail.com'],
         isAvailable: false 
     },
     {
@@ -95,7 +93,7 @@ const properties : {
             code: 35433,
             country: 'United Kingdom',
         },
-        contact: [ +1123495082908, 'andyluger@aol.com'],
+        contact: [+34829374892553, 'andyluger@aol.com'],
         isAvailable: true
     }
 ]
@@ -105,18 +103,7 @@ showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
 
-isLoggedIn = false //set it to true
-
-
-//show property details fuction
-function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
-  if (authorityStatus) {
-      const priceDisplay = document.createElement('div')
-      priceDisplay.innerHTML = price.toString() + '/night'
-      element.appendChild(priceDisplay)
-  }
-}
-//Add the properties
+// Add the properties
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div')
     card.classList.add('card')
@@ -124,14 +111,10 @@ for (let i = 0; i < properties.length; i++) {
     const image = document.createElement('img')
     image.setAttribute('src', properties[i].image)
     card.appendChild(image)
-    propertyContainer.appendChild(card)
     showDetails(you.permissions, card, properties[i].price)
+    propertyContainer.appendChild(card)
 }
 
-// use your location, your current time, and the current temperature of your
-// location
-let currentLocation: [string, string, number] = ['London', '11:35', 17]
+let currentLocation : [string, string, number] = ['London', '11.03', 17]
 footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + currentLocation[2] + '°'
-
-
 
