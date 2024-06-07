@@ -5,7 +5,9 @@ import { LoyaltyUser } from "./enum.ts"
    Update the reviewTotalDisplay element's content
    populateUser Function to populate user-related information
    If the user is returning, display "back" in the returningUserDisplay element
-   isplay the user's name in the userNameDisplay element
+   display the user's name in the userNameDisplay element
+   show details funtion
+   make multiple fuction with type of return
    */
 
 const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
@@ -30,4 +32,12 @@ export function showDetails(value: boolean | Permissions, element : HTMLElement,
         priceDisplay.innerHTML = price.toString() + '/night'
         element.appendChild(priceDisplay)
     }
+}
+
+// function with type 
+
+export function makeMultiple(value: number) : string {
+    if (value > 1 || value == 0 ) {
+        return 's'
+    } else return ''
 }
