@@ -9,6 +9,11 @@ import { Price, Country } from './types.ts'
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 const footer = document.querySelector('.footer') as HTMLElement
 
+const reviewContainer = document.querySelector('.reviews') as HTMLElement
+const container = document.querySelector('.container') as HTMLElement
+const button = document.querySelector('button') as HTMLElement
+
+
 let isLoggedIn: boolean
 
 // Reviews
