@@ -1,5 +1,5 @@
-import { LoyaltyUser } from "./enum.ts"
 
+import { Review } from './interface'
 /* showReviewTota Function to display review total and reviewer information
    Determine whether the user is a gold user (loyalty status)
    Update the reviewTotalDisplay element's content
@@ -13,6 +13,17 @@ import { LoyaltyUser } from "./enum.ts"
 const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
 const returningUserDisplay = document.querySelector('#returning-user') as HTMLElement
 const userNameDisplay = document.querySelector('#user') as HTMLElement
+
+enum Permissions {
+    ADMIN = 'ADMIN', 
+    READ_ONLY = 'READ_ONLY'
+}
+
+enum LoyaltyUser {
+    GOLD_USER = 'GOLD_USER',
+    SILVER_USER = 'SILVER_USER',
+    BRONZE_USER = 'BRONZE_USER'
+}
 
 export function showReviewTotal(value: number, reviewer: string, isLoyalty: LoyaltyUser) {
     const iconDisplay = LoyaltyUser.GOLD_USER ? '⭐' : ''
