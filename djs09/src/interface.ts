@@ -1,4 +1,4 @@
-import { Price} from './types'
+import { Country, Price} from './types'
 enum LoyaltyUser {
     GOLD_USER = 'GOLD_USER',
     SILVER_USER = 'SILVER_USER',
@@ -20,7 +20,7 @@ export interface Property {
         firstLine: string;
         city: string;
         code: number | string;
-        country: string
+        country: Country
     }
     contact: [ number, string];
     isAvailable: boolean;
