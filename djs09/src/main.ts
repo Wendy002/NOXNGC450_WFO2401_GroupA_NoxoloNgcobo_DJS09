@@ -5,7 +5,7 @@
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews } from './utils'
 import { Permissions , LoyaltyUser } from './enum.ts'
 import  {Review, Property}  from './interface.ts' 
-
+import { MainProperty } from './classes.ts'
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 const footer = document.querySelector('.footer') as HTMLElement
@@ -145,17 +145,6 @@ button.addEventListener('click', () => addReviews(reviews))
 let currentLocation : [string, string, number] = ['London', '11.03', 17]
 footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + currentLocation[2] + '°'
 
-//main image class 
-class MainProperty {
-  src: string
-  title: string
-  reviews: Review[]
-  constructor(src:string, title:string, reviews: Review[]) {
-      this.src = src
-      this.title = title
-      this.reviews = reviews
-  }
-}
 
 let yourMainProperty = new MainProperty('images/italian-property.jpg', 
 'Italian House',
