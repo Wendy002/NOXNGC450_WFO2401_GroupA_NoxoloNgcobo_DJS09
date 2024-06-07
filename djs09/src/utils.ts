@@ -40,17 +40,7 @@ export function makeMultiple(value: number) : string {
     } else return ''
 }
 
-export function getTopTwoReviews(reviews : { 
-    name: string; 
-    stars: number; 
-    loyaltyUser: LoyaltyUser;
-     date: string; 
-     }[]) : { 
-         name: string; 
-         stars: number; 
-         loyaltyUser: LoyaltyUser; 
-         date: string; 
-         }[]  {
- const sortedReviews = reviews.sort((a, b) => b.stars - a.stars)
- return sortedReviews.slice(0,2)
-}
+export function getTopTwoReviews(reviews : Review[]) : Review[]  {
+    const sortedReviews = reviews.sort((a, b) => b.stars - a.stars)
+    return sortedReviews.slice(0,2)
+   }
