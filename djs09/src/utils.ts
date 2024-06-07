@@ -23,3 +23,11 @@ export function populateUser(isReturning : boolean, userName: string ) {
     }
     userNameDisplay.innerHTML = userName
 }
+
+export function showDetails(value: boolean | Permissions, element : HTMLElement, price: number) {
+    if (value) {
+        const priceDisplay = document.createElement('div')
+        priceDisplay.innerHTML = price.toString() + '/night'
+        element.appendChild(priceDisplay)
+    }
+}
