@@ -16,7 +16,7 @@ const button = document.querySelector('button') as HTMLElement
 const mainImageContainer = document.querySelector('.main-image') as HTMLElement
 
 
-let isLoggedIn: boolean
+//let isLoggedIn: boolean
 
 // Reviews
 const reviews : Review[] = [
