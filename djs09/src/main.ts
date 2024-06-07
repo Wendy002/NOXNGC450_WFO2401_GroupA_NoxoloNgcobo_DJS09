@@ -4,8 +4,8 @@
 // properties array
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews } from './utils'
 import { Permissions , LoyaltyUser } from './enum.ts'
-import { Price, Country } from './types.ts'
-import  Review  from './interface.ts' 
+import { Country } from './types.ts'
+import  {Review, Property}  from './interface.ts' 
 
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
@@ -52,19 +52,8 @@ const you = {
 }
 
 // Array of Properties
-const properties : {
-    image: string;
-    title: string;
-    price: number;
-    location: {
-        firstLine: string;
-        city: string;
-        code: number;
-        country: Country;
-    };
-    contact: [ number, string ];
-    isAvailable: boolean;
-}[] = [
+const properties :
+Property[] = [
     {
         image: 'images/colombia-property.jpg',
         title: 'Colombian Shack',
