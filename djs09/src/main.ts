@@ -14,6 +14,7 @@ const footer = document.querySelector('.footer') as HTMLElement
 const reviewContainer = document.querySelector('.reviews') as HTMLElement
 const container = document.querySelector('.container') as HTMLElement
 const button = document.querySelector('button') as HTMLElement
+const mainImageContainer = document.querySelector('.main-image') as HTMLElement
 
 
 let isLoggedIn: boolean
@@ -154,3 +155,9 @@ class MainProperty {
       this.reviews = reviews
   }
 }
+
+let yourMainProperty = new MainProperty()
+
+const image = document.createElement('img')
+image.setAttribute('src', yourMainProperty.src)
+mainImageContainer.appendChild(image)
