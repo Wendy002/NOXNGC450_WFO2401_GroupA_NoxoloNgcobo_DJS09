@@ -38,7 +38,6 @@ const reviews : Review[] = [
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '27-03-2021',
-        description: 'Great hosts, location was a bit further than said.'
     },
 ]
 
@@ -145,7 +144,14 @@ class MainProperty {
   }
 }
 
-let yourMainProperty = new MainProperty()
+let yourMainProperty = new MainProperty('images/italian-property.jpg', 
+'Italian House',
+[{
+    name: 'Olive',
+    stars: 5,
+    loyaltyUser: LoyaltyUser.GOLD_USER,
+    date: '12-04-2021'
+}] )
 
 const image = document.createElement('img')
 image.setAttribute('src', yourMainProperty.src)
