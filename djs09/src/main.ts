@@ -4,7 +4,6 @@
 // properties array
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews } from './utils'
 import { Permissions , LoyaltyUser } from './enum.ts'
-import { Country } from './types.ts'
 import  {Review, Property}  from './interface.ts' 
 
 
