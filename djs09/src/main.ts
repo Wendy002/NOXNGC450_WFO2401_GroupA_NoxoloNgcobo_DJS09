@@ -2,7 +2,7 @@
 // This is a continuation of the Challenge, in which you are asked to add
 // the 3 properties image and title to the dashboard based on the 
 // properties array
-import { showReviewTotal, populateUser, showDetails } from './utils'
+import { showReviewTotal, populateUser, showDetails, getTopTwoReviews } from './utils'
 import { Permissions , LoyaltyUser } from './enum.ts'
 import { Price, Country } from './types.ts'
 
