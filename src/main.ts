@@ -6,6 +6,7 @@ import { showReviewTotal, populateUser, showDetails, getTopTwoReviews } from './
 import { Permissions , LoyaltyUser } from './enum.ts'
 import  {Review, Property}  from './interface.ts' 
 import { MainProperty } from './classes.ts'
+import './style.css'
 
 const propertyContainer = document.querySelector('.properties') as HTMLElement
 const footer = document.querySelector('.footer') as HTMLElement
