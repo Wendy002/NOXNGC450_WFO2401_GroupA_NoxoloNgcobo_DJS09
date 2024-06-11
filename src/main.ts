@@ -42,8 +42,8 @@ const reviews : Review[] = [
 ]
 
 const you = {
-    firstName: 'Bobby',
-    lastName: 'Brown',
+    firstName: 'Noxolo',
+    lastName: 'Ngcobo',
     permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
@@ -143,7 +143,7 @@ function addReviews(array: Review[]) : void {
 
 button.addEventListener('click', () => addReviews(reviews))
 
-let currentLocation : [string, string, number] = ['London', '11.03', 17]
+let currentLocation : [string, string, number] = ['Durban', '11.03', 17]
 footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + currentLocation[2] + '°'
 
 
